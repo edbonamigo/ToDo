@@ -1,0 +1,31 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6.4rem;
+}
+
+.tasks {
+  width: 100%;
+}
+
+.empty {
+  border-top: 1px solid var(--gray-400);
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.empty img {
+  margin: 6.4rem auto 1.6rem;
+  width: 5.4rem;
+  height: 5.4rem;
+}
+
+.empty h2 {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  color: var(--gray-300);
+  font-weight: normal;
+}

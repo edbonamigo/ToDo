@@ -1,0 +1,24 @@
+.tasksHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.tasksHeader h3 {
+  font-size: 1.4rem;
+  color: var(--purple);
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
+.created h3 {
+  color: var(--blue);
+}
+
+.tasksHeader span {
+  border-radius: 8px;
+  background-color: var(--gray-400);
+  padding: 0.2rem 0.8rem;
+  font-size: 1.2rem;
+}

@@ -23,13 +23,13 @@ const TASKS = [
 ];
 
 // TODO:
-// change trash icons to use phosphor.react
 // change plus icons to use phosphor.react
 // improve transition of checkmark
 // disable create if input empty
 // when checkmark focus, outline task border [?]
 // reorder tasks when completing task
 // elaborate beautiful readme
+// criar popup de desfazer ação de delete, com timeOut de 10s e keyListener 'ctrl+Z'
 
 export function ToDos() {
   const [tasks, setTasks] = useState(TASKS);

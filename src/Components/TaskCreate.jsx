@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import plus from "../assets/plus.svg";
+import { PlusCircle } from "phosphor-react";
 import css from "./taskCreate.module.css";
 
 export function TaskCreate({ handleCreateNewTask, onTextChange, newText }) {
@@ -14,7 +14,8 @@ export function TaskCreate({ handleCreateNewTask, onTextChange, newText }) {
         placeholder="Add a new task"
       />
       <button className={css.button} type="submit">
-        Create <img src={plus} alt="Plus" />
+        Create
+        <PlusCircle weight="light" size={24} />
       </button>
     </form>
   );

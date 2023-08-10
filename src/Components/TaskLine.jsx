@@ -1,7 +1,7 @@
 // /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import css from "./taskLine.module.css";
-import { Circle, CheckCircle } from "phosphor-react";
+import { Circle, CheckCircle, Trash } from "phosphor-react";
 
 export function TaskLine({
   id,
@@ -37,11 +37,9 @@ export function TaskLine({
         )}
       </button>
       <p className={css.text}>{text}</p>
-      <button
-        className={css.delete}
-        onClick={handleDeleteTask}
-        title="Delete"
-      ></button>
+      <button className={css.delete} onClick={handleDeleteTask} title="Delete">
+        <Trash size={22} />
+      </button>
     </li>
   );
 }

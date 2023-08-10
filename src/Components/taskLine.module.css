@@ -65,10 +65,15 @@
   visibility: hidden;
   opacity: 0;
 }
+
 .checkmark:hover .circleBg,
 .checkmark:hover .checkBg {
   visibility: visible;
   opacity: 1;
+}
+
+.taskLine:focus-within {
+  box-shadow: 0 0 0 2px var(--purple-dark);
 }
 
 .text {
@@ -87,18 +92,23 @@
 }
 
 .delete {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 8px;
-  background: url("../assets/trash.svg");
+  display: block;
   padding: 0;
   margin: 0;
-  margin-top: -3px;
   border: 0;
-  transition: background 0.2s ease-in-out;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: relative;
+  outline: 0;
+  box-shadow: none !important;
+  cursor: pointer;
+  color: var(--gray-300);
 }
 
 .delete:hover,
 .delete:focus {
-  background: url("../assets/trasher.svg");
+  color: var(--red);
 }

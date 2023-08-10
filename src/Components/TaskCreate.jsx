@@ -13,7 +13,11 @@ export function TaskCreate({ handleCreateNewTask, onTextChange, newText }) {
         value={newText}
         placeholder="Add a new task"
       />
-      <button className={css.button} type="submit">
+      <button
+        className={css.button}
+        type="submit"
+        disabled={newText.length === 0}
+      >
         Create
         <PlusCircle weight="light" size={24} />
       </button>

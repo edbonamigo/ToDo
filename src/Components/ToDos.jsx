@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { v4 as uuidv4 } from "uuid";
 import clipboard from "../assets/clipboard.svg";
-import styles from "./Tasks.module.css";
+import css from "./toDos.module.css";
 
 import { useState } from "react";
 
@@ -23,30 +23,32 @@ const TASKS = [
 ];
 
 // TODO:
+// change trash icons to use phosphor.react
+// change plus icons to use phosphor.react
+// improve transition of checkmark
 // disable create if input empty
-// toggle completed task
-// when checkmark focus, highlight task border
-// change icons to use phosphor.react
+// when checkmark focus, outline task border [?]
+// reorder tasks when completing task
 // elaborate beautiful readme
 
-export function Tasks() {
+export function ToDos() {
   const [tasks, setTasks] = useState(TASKS);
   const [newText, setNewText] = useState("");
 
   function handleCreateNewTask(e) {
     e.preventDefault();
-    const input = e.target.text;
+    const textInput = e.target.text;
 
     const newTask = {
       id: uuidv4(),
-      text: input.value,
+      text: textInput.value,
       completed: false,
     };
 
     setTasks([newTask, ...tasks]);
 
     setNewText("");
-    input.focus();
+    textInput.focus();
   }
 
   function deleteTask(id) {
@@ -57,12 +59,20 @@ export function Tasks() {
     setTasks(tasksWithoutDeletedOne);
   }
 
+  function toggleComplete(id) {
+    const tasksWithToggledOne = tasks.map((task) =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    );
+
+    setTasks(tasksWithToggledOne);
+  }
+
   const createdTasks = tasks.length;
   const completedTaks = tasks.filter((task) => task.completed === true).length;
   const completedAndTotal = `${completedTaks} / ${createdTasks}`;
 
   return (
-    <main className={styles.tasks}>
+    <main className={css.tasks}>
       <TaskCreate
         handleCreateNewTask={handleCreateNewTask}
         onTextChange={setNewText}
@@ -75,7 +85,7 @@ export function Tasks() {
       />
 
       {tasks.length > 0 ? (
-        <ul className={styles.tasks}>
+        <ul className={css.tasks}>
           {tasks.map((task) => {
             return (
               <TaskLine
@@ -84,12 +94,13 @@ export function Tasks() {
                 text={task.text}
                 completed={task.completed}
                 onDeleteTask={deleteTask}
+                onToggleCompleted={toggleComplete}
               />
             );
           })}
         </ul>
       ) : (
-        <div className={styles.empty}>
+        <div className={css.empty}>
           <img src={clipboard} alt="Clipboard" />
           <h2>
             <strong>Você ainda não tem tarefas cadastradas</strong>

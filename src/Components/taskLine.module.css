@@ -1,0 +1,104 @@
+.taskLine {
+  width: 100%;
+  padding: 1.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  background-color: var(--gray-500);
+
+  display: flex;
+  align-items: top;
+  gap: 1.2rem;
+}
+
+.taskLine + .taskLine {
+  margin-top: 1.2rem;
+}
+
+.checkmark {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: relative;
+  outline: 0;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.circle,
+.circleBg,
+.check,
+.checkBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  /* transition: opacity 0.05s linear; */
+}
+
+.circle {
+  visibility: visible;
+  opacity: 1;
+  color: var(--blue);
+}
+
+.circleBg {
+  color: var(--blue-dark);
+}
+
+.check {
+  visibility: visible;
+  opacity: 1;
+  color: var(--purple);
+}
+.checkBg {
+  color: var(--purple-dark);
+}
+
+.checkmark:hover .circle,
+.checkmark:hover .check {
+  visibility: hidden;
+  opacity: 0;
+}
+.checkmark:hover .circleBg,
+.checkmark:hover .checkBg {
+  visibility: visible;
+  opacity: 1;
+}
+
+.text {
+  flex: 1;
+  font-size: 1.4rem;
+  padding-top: 0.22rem;
+}
+
+.completed {
+  border: 1px solid var(--gray-600);
+}
+
+.completed .text {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.delete {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 8px;
+  background: url("../assets/trash.svg");
+  padding: 0;
+  margin: 0;
+  margin-top: -3px;
+  border: 0;
+  transition: background 0.2s ease-in-out;
+}
+
+.delete:hover,
+.delete:focus {
+  background: url("../assets/trasher.svg");
+}

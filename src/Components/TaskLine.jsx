@@ -1,17 +1,44 @@
+// /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import styles from "./TaskLine.module.css";
+import css from "./taskLine.module.css";
+import { Circle, CheckCircle } from "phosphor-react";
 
-export function TaskLine({ id, text, completed, onDeleteTask }) {
+export function TaskLine({
+  id,
+  text,
+  completed,
+  onDeleteTask,
+  onToggleCompleted,
+}) {
   function handleDeleteTask() {
     onDeleteTask(id);
   }
 
+  function handleToggleComplete() {
+    onToggleCompleted(id);
+  }
+
   return (
-    <li key={id} className={`${styles.task}`}>
-      <input type="checkbox" className={styles.checkmark} />
-      <p className={styles.text}>{text}</p>
+    <li
+      key={id}
+      className={`${css.taskLine} ${completed ? css.completed : ""}`}
+    >
+      <button className={css.checkmark} onClick={handleToggleComplete}>
+        {!completed ? (
+          <>
+            <Circle className={css.circle} wheight="light" size={24} />
+            <Circle className={css.circleBg} weight="duotone" size={24} />
+          </>
+        ) : (
+          <>
+            <CheckCircle className={css.check} weight="fill" size={24} />
+            <CheckCircle className={css.checkBg} wheight="duotone" size={24} />
+          </>
+        )}
+      </button>
+      <p className={css.text}>{text}</p>
       <button
-        className={styles.delete}
+        className={css.delete}
         onClick={handleDeleteTask}
         title="Delete"
       ></button>

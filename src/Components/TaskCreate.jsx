@@ -1,19 +1,19 @@
 /* eslint-disable react/prop-types */
 import plus from "../assets/plus.svg";
-import styles from "./TaskCreate.module.css";
+import css from "./taskCreate.module.css";
 
 export function TaskCreate({ handleCreateNewTask, onTextChange, newText }) {
   return (
-    <form className={styles.TaskCreate} onSubmit={handleCreateNewTask}>
+    <form className={css.taskCreate} onSubmit={handleCreateNewTask}>
       <input
         type="text"
         name="text"
-        className={styles.input}
+        className={css.input}
         onChange={(e) => onTextChange(e.target.value)}
         value={newText}
         placeholder="Add a new task"
       />
-      <button className={styles.button} type="submit">
+      <button className={css.button} type="submit">
         Create <img src={plus} alt="Plus" />
       </button>
     </form>

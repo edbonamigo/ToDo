@@ -1,17 +1,55 @@
 /* eslint-disable react/prop-types */
+import { v4 as uuidv4 } from "uuid";
 import clipboard from "../assets/clipboard.svg";
 import styles from "./Tasks.module.css";
 
-import { TaskAdd } from "./TaskAdd";
+import { useState } from "react";
+
+import { TaskCreate } from "./TaskCreate";
 import { TasksHeader } from "./TasksHeader";
 import { TaskLine } from "./TaskLine";
 
-export function Tasks({ tasks }) {
-  // States for tasks live here
+const TASKS = [
+  {
+    id: uuidv4(),
+    text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+    completed: false,
+  },
+  {
+    id: uuidv4(),
+    text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+    completed: true,
+  },
+];
+
+export function Tasks() {
+  const [tasks, setTasks] = useState(TASKS);
+  const [newText, setNewText] = useState("");
+
+  function handleCreateNewTask(e) {
+    e.preventDefault();
+    const input = e.target.text;
+
+    const newTask = {
+      id: uuidv4(),
+      text: input.value,
+      completed: false,
+    };
+
+    setTasks([newTask, ...tasks]);
+
+    setNewText("");
+    input.focus();
+  }
 
   return (
     <main className={styles.tasks}>
-      <TaskAdd />
+      <TaskCreate
+        handleCreateNewTask={handleCreateNewTask}
+        onTextChange={setNewText}
+        newText={newText}
+      />
+
       <TasksHeader />
 
       {tasks.length > 0 ? (

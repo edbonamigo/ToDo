@@ -2,7 +2,6 @@ import { v4 as uuidv4 } from "uuid";
 import logo from "./assets/Logo.svg";
 import styles from "./App.module.css";
 
-import { TaskAdd } from "./Components/TaskAdd";
 import { Tasks } from "./Components/Tasks";
 
 const TASKS = [
@@ -30,11 +29,7 @@ function App() {
         <img src={logo} alt="Logo todo" />
       </header>
 
-      <div className={styles.wrapper}>
-        <TaskAdd />
-
-        <Tasks tasks={TASKS} />
-      </div>
+      <Tasks tasks={TASKS} />
     </div>
   );
 }

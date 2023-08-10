@@ -1,11 +1,8 @@
-main {
+.tasks {
   display: flex;
   flex-direction: column;
-  margin-top: 6.4rem;
-}
-
-.tasks {
-  width: 100%;
+  max-width: 73.6rem;
+  margin: 0 auto;
 }
 
 .empty {

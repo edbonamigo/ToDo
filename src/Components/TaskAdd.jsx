@@ -2,6 +2,8 @@ import plus from "../assets/plus.svg";
 import styles from "./TaskAdd.module.css";
 
 export function TaskAdd() {
+  // State for input text
+
   return (
     <form className={styles.taskAdd}>
       <input

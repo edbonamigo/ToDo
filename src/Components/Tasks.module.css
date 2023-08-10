@@ -1,4 +1,5 @@
 .tasks {
+  width: 100%;
   display: flex;
   flex-direction: column;
   max-width: 73.6rem;

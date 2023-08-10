@@ -42,6 +42,16 @@ export function Tasks() {
     input.focus();
   }
 
+  // disable create if input empty
+
+  function deleteTask(taskToDelete) {
+    const tasksWithoutDeletedOne = tasks.filter((task) => {
+      return task.id !== taskToDelete;
+    });
+
+    setTasks(tasksWithoutDeletedOne);
+  }
+
   return (
     <main className={styles.tasks}>
       <TaskCreate
@@ -58,8 +68,10 @@ export function Tasks() {
             return (
               <TaskLine
                 key={task.id}
+                id={task.id}
                 text={task.text}
                 completed={task.completed}
+                onDeleteTask={deleteTask}
               />
             );
           })}

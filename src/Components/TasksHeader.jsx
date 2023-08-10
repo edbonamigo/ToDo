@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import styles from "./TasksHeader.module.css";
 
-export function TasksHeader({ createdTasks, completedTasks }) {
+export function TasksHeader({ createdTasks, completedAndTotal }) {
   return (
     <header className={styles.tasksHeader}>
       <div className={styles.created}>
@@ -10,7 +10,7 @@ export function TasksHeader({ createdTasks, completedTasks }) {
       </div>
       <div className={styles.completed}>
         <h3>Completed</h3>
-        <span>{completedTasks}</span>
+        <span>{completedAndTotal}</span>
       </div>
     </header>
   );

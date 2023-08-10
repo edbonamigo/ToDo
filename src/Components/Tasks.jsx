@@ -22,6 +22,13 @@ const TASKS = [
   },
 ];
 
+// TODO:
+// disable create if input empty
+// toggle completed task
+// when checkmark focus, highlight task border
+// change icons to use phosphor.react
+// elaborate beautiful readme
+
 export function Tasks() {
   const [tasks, setTasks] = useState(TASKS);
   const [newText, setNewText] = useState("");
@@ -42,15 +49,17 @@ export function Tasks() {
     input.focus();
   }
 
-  // disable create if input empty
-
-  function deleteTask(taskToDelete) {
+  function deleteTask(id) {
     const tasksWithoutDeletedOne = tasks.filter((task) => {
-      return task.id !== taskToDelete;
+      return task.id !== id;
     });
 
     setTasks(tasksWithoutDeletedOne);
   }
+
+  const createdTasks = tasks.length;
+  const completedTaks = tasks.filter((task) => task.completed === true).length;
+  const completedAndTotal = `${completedTaks} / ${createdTasks}`;
 
   return (
     <main className={styles.tasks}>
@@ -60,7 +69,10 @@ export function Tasks() {
         newText={newText}
       />
 
-      <TasksHeader />
+      <TasksHeader
+        createdTasks={createdTasks}
+        completedAndTotal={completedAndTotal}
+      />
 
       {tasks.length > 0 ? (
         <ul className={styles.tasks}>

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { PlusCircle } from "phosphor-react";
 import css from "./taskCreate.module.css";
 

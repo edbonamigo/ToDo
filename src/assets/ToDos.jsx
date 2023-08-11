@@ -25,8 +25,7 @@ const TASKS = [
 // TODO:
 // add typescript
 // elaborate beautiful readme
-// improve transition of checkmark
-// criar popup de desfazer ação de delete, com timeOut de 10s e keyListener 'ctrl+Z'
+// extra: criar popup de desfazer ação de delete, com timeOut de 10s e keyListener 'ctrl+Z'
 
 export function ToDos() {
   const [tasks, setTasks] = useState(TASKS);

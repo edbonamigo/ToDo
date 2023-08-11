@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import css from "./tasksHeader.module.css";
 
 export function TasksHeader({ createdTasks, completedAndTotal }) {

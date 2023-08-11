@@ -1,5 +1,3 @@
-// /* eslint-disable react/no-unknown-property */
-/* eslint-disable react/prop-types */
 import css from "./taskLine.module.css";
 import { Circle, CheckCircle, Trash } from "phosphor-react";
 

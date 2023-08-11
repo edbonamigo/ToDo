@@ -47,11 +47,11 @@ export function ToDos() {
 
   function handleCreateNewTask(e: React.FormEvent) {
     e.preventDefault();
-    const textInput = e.target.text;
+    const textInput = (e.target as HTMLFormElement).text.value;
 
     const newTask = {
       id: uuidv4(),
-      text: textInput.value,
+      text: textInput,
       completed: false,
     };
 
@@ -61,7 +61,7 @@ export function ToDos() {
     textInput.focus();
   }
 
-  function deleteTask(id) {
+  function deleteTask(id: string) {
     const tasksWithoutDeletedOne = tasks.filter((task) => {
       return task.id !== id;
     });
@@ -69,7 +69,7 @@ export function ToDos() {
     setTasks(tasksWithoutDeletedOne);
   }
 
-  function toggleComplete(id) {
+  function toggleComplete(id: string) {
     const tasksWithToggledOne = tasks.map((task) =>
       task.id === id ? { ...task, completed: !task.completed } : task
     );
@@ -79,7 +79,7 @@ export function ToDos() {
     setTasks(sortedTasks);
   }
 
-  const createdTasks = tasks.length;
+  const createdTasks = `${tasks.length}`;
   const completedTaks = tasks.filter((task) => task.completed === true).length;
   const completedAndTotal = `${completedTaks} / ${createdTasks}`;
 

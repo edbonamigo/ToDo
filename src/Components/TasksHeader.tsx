@@ -1,6 +1,14 @@
 import css from "./tasksHeader.module.css";
 
-export function TasksHeader({ createdTasks, completedAndTotal }) {
+interface TasksHeaderProps {
+  createdTasks: string;
+  completedAndTotal: string;
+}
+
+export function TasksHeader({
+  createdTasks,
+  completedAndTotal,
+}: TasksHeaderProps) {
   return (
     <header className={css.tasksHeader}>
       <div className={css.created}>

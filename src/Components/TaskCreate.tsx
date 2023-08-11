@@ -1,7 +1,17 @@
 import { PlusCircle } from "phosphor-react";
 import css from "./taskCreate.module.css";
 
-export function TaskCreate({ handleCreateNewTask, onTextChange, newText }) {
+interface TaskCreateProps {
+  newText: string;
+  onTextChange: (text: string) => void;
+  handleCreateNewTask: (event: React.FormEvent) => void;
+}
+
+export function TaskCreate({
+  newText,
+  onTextChange,
+  handleCreateNewTask,
+}: TaskCreateProps) {
   return (
     <form className={css.taskCreate} onSubmit={handleCreateNewTask}>
       <input

@@ -1,13 +1,21 @@
 import css from "./taskLine.module.css";
 import { Circle, CheckCircle, Trash } from "phosphor-react";
 
+interface TaskLineProps {
+  id: string;
+  text: string;
+  completed: boolean;
+  onDeleteTask: (id: string) => void;
+  onToggleCompleted: (id: string) => void;
+}
+
 export function TaskLine({
   id,
   text,
   completed,
   onDeleteTask,
   onToggleCompleted,
-}) {
+}: TaskLineProps) {
   function handleDeleteTask() {
     onDeleteTask(id);
   }
@@ -24,13 +32,13 @@ export function TaskLine({
       <button className={css.checkmark} onClick={handleToggleComplete}>
         {!completed ? (
           <>
-            <Circle className={css.circle} wheight="light" size={24} />
+            <Circle className={css.circle} weight="light" size={24} />
             <Circle className={css.circleBg} weight="duotone" size={24} />
           </>
         ) : (
           <>
             <CheckCircle className={css.check} weight="fill" size={24} />
-            <CheckCircle className={css.checkBg} wheight="duotone" size={24} />
+            <CheckCircle className={css.checkBg} weight="duotone" size={24} />
           </>
         )}
       </button>

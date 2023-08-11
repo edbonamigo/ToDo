@@ -17,8 +17,9 @@ export function TaskCreate({ handleCreateNewTask, onTextChange, newText }) {
         className={css.button}
         type="submit"
         disabled={newText.length === 0}
+        title={newText.length === 0 ? "Type something" : ""}
       >
-        Create
+        <span>Create</span>
         <PlusCircle weight="light" size={24} />
       </button>
     </form>

@@ -18,10 +18,11 @@
   border: none;
   text-align: center;
   padding: 1.6rem;
+  margin: 0.15rem 0;
   display: flex;
   gap: 0.8rem;
   align-items: center;
-  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .button:hover {
@@ -32,11 +33,29 @@
 .button:disabled {
   cursor: unset;
   background-color: var(--blue-dark);
-  color: var(--gray-400);
   opacity: 0.9;
+}
+
+.button:disabled span,
+.button:disabled svg {
+  opacity: 0.4;
 }
 
 .button img {
   width: 1.6rem;
   height: 1.6rem;
+}
+
+@media (max-width: 560px) {
+  .input {
+    width: calc(100% - 5.6rem);
+  }
+
+  .button {
+    width: 5.6rem;
+  }
+
+  .button span {
+    display: none;
+  }
 }

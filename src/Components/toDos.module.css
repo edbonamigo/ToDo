@@ -1,9 +1,10 @@
-.tasks {
+.todos {
   width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 73.6rem;
+  max-width: 75rem;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .empty {

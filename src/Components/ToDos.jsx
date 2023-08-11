@@ -23,9 +23,7 @@ const TASKS = [
 ];
 
 // TODO:
-// disable create if input empty
-
-// reorder tasks when completing task
+// add typescript
 // elaborate beautiful readme
 // improve transition of checkmark
 // criar popup de desfazer ação de delete, com timeOut de 10s e keyListener 'ctrl+Z'
@@ -33,6 +31,15 @@ const TASKS = [
 export function ToDos() {
   const [tasks, setTasks] = useState(TASKS);
   const [newText, setNewText] = useState("");
+
+  function sortCompletedToBottom(arr) {
+    return [...arr].sort((a, b) => {
+      if (a.completed === b.completed) {
+        return 0;
+      }
+      return a.completed ? 1 : -1;
+    });
+  }
 
   function handleCreateNewTask(e) {
     e.preventDefault();
@@ -63,7 +70,9 @@ export function ToDos() {
       task.id === id ? { ...task, completed: !task.completed } : task
     );
 
-    setTasks(tasksWithToggledOne);
+    const sortedTasks = sortCompletedToBottom(tasksWithToggledOne);
+
+    setTasks(sortedTasks);
   }
 
   const createdTasks = tasks.length;
@@ -71,7 +80,7 @@ export function ToDos() {
   const completedAndTotal = `${completedTaks} / ${createdTasks}`;
 
   return (
-    <main className={css.tasks}>
+    <main className={css.todos}>
       <TaskCreate
         handleCreateNewTask={handleCreateNewTask}
         onTextChange={setNewText}
@@ -102,9 +111,9 @@ export function ToDos() {
         <div className={css.empty}>
           <img src={clipboard} alt="Clipboard" />
           <h2>
-            <strong>Você ainda não tem tarefas cadastradas</strong>
+            <strong>You don't have any tasks registered yet.</strong>
           </h2>
-          <h2>Crie tarefas e organize seus itens a fazer</h2>
+          <h2>Create tasks and organize your to-do items.</h2>
         </div>
       )}
     </main>

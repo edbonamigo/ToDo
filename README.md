@@ -25,3 +25,17 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+# Next steps:
+
+- Deploy somewhere
+- Add DNS for todo.edubon.work
+- extra UX: popup to undo (ctrl+Z) delete action
+  - 10s timeout after deleting task
+  - checkbox to toggle: "Not show this message again!"
+- Backend
+- Database
+- Login
+- Archive completed todos
+  - Separated pages
+  - by Date and Page name

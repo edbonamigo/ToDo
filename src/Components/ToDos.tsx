@@ -28,9 +28,9 @@ const TASKS: Task[] = [
 ];
 
 // TODO:
-// add typescript
-// elaborate beautiful readme
-// extra: criar popup de desfazer ação de delete, com timeOut de 10s e keyListener 'ctrl+Z'
+// Deploy somewhere
+// Add DNS for todo.edubon.work
+// elaborate Readme
 
 export function ToDos() {
   const [tasks, setTasks] = useState<Task[]>(TASKS);

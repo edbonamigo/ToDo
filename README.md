@@ -1,41 +1,34 @@
-# React + TypeScript + Vite
+# Ignite - To do 🔥
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Tudo](https://raw.githubusercontent.com/edbonamigo/ToDo-Ignite/main/src/assets/screenshot.jpg)](https://tudo.edubon.work)
 
-Currently, two official plugins are available:
+[![README Ptbr](https://img.shields.io/badge/README-pt_br-blue?link=https%3A%2F%2Fgithub.com%2Fedbonamigo%2FToDo-Ignite%2Fblob%2Fmain%2FREADME-ptbr.md)](https://github.com/edbonamigo/ToDo-Ignite/blob/main/README-ptbr.md) [![Project Live](https://img.shields.io/badge/Project-live-green)](https://tudo.edubon.work)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Responsive todo list app, able to create tasks, delete and mark as complete. Made with React + Typescript + Vite.
 
-## Expanding the ESLint configuration
+##Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+You will need `node` and `npm` installed globally on your machine.
 
-- Configure the top-level `parserOptions` property like this:
+Clone down this repository. Via terminal go to the repository folder and run:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+$ npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```bash
+$ npm run dev
+```
 
-# Next steps:
+## About the project
 
-- Deploy somewhere
-- Add DNS for todo.edubon.work
-- extra UX: popup to undo (ctrl+Z) delete action
-  - 10s timeout after deleting task
-  - checkbox to toggle: "Not show this message again!"
-- Backend
-- Database
-- Login
-- Archive completed todos
-  - Separated pages
-  - by Date and Page name
+This web app began as a challange. it's now a way to apply and practice the new techniques and fundamentals I am currently studying.
+
+Already implemented in this app:
+
+- React fundamentals
+- TypeScript
+- Vite
+- README best practices
+
+Open the app to see what there is to be studied and implemented: [Live Project](https://tudo.edubon.work)

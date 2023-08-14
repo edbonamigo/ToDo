@@ -1,8 +1,8 @@
 # Ignite - To do 🔥
 
-[![Tudo](https://raw.githubusercontent.com/edbonamigo/ToDo-Ignite/main/src/assets/screenshot.jpg)](https://tudo.edubon.work)
+[![Tudo](https://raw.githubusercontent.com/edbonamigo/ToDo-Ignite/main/src/assets/screenshot.jpg)](https://to-do-ignite-five.vercel.app/)
 
-[![README Ptbr](https://img.shields.io/badge/README-pt_br-blue?link=https%3A%2F%2Fgithub.com%2Fedbonamigo%2FToDo-Ignite%2Fblob%2Fmain%2FREADME-ptbr.md)](https://github.com/edbonamigo/ToDo-Ignite/blob/main/README-ptbr.md) [![Project Live](https://img.shields.io/badge/Project-live-green)](https://tudo.edubon.work)
+[![README Ptbr](https://img.shields.io/badge/README-pt_br-blue?link=https%3A%2F%2Fgithub.com%2Fedbonamigo%2FToDo-Ignite%2Fblob%2Fmain%2FREADME-ptbr.md)](https://github.com/edbonamigo/ToDo-Ignite/blob/main/README-ptbr.md) [![Project Live](https://img.shields.io/badge/Project-live-green)](https://to-do-ignite-five.vercel.app/)
 
 > Responsive todo list app, able to create tasks, delete and mark as complete. Made with React + Typescript + Vite.
 
@@ -31,4 +31,4 @@ Already implemented in this app:
 - Vite
 - README best practices
 
-Open the app to see what there is to be studied and implemented: [Live Project](https://tudo.edubon.work)
+Open the app to see what there is to be studied and implemented: [Live Project](https://to-do-ignite-five.vercel.app/)

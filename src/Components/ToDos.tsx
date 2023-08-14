@@ -17,12 +17,27 @@ export interface Task {
 const TASKS: Task[] = [
   {
     id: uuidv4(),
-    text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
-    completed: false,
+    text: "List the things left to learn and implement",
+    completed: true,
   },
   {
     id: uuidv4(),
-    text: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.",
+    text: "React Fundamentals",
+    completed: true,
+  },
+  {
+    id: uuidv4(),
+    text: "TypeScript",
+    completed: true,
+  },
+  {
+    id: uuidv4(),
+    text: "Vite",
+    completed: true,
+  },
+  {
+    id: uuidv4(),
+    text: "README best practices",
     completed: true,
   },
 ];

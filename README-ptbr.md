@@ -10,7 +10,7 @@
 
 Você precisará do `node` e do `npm` instalados globalmente em sua máquina.
 
-Clone este repositório. Através do terminal, vá para a pasta do repositório e execute:
+Clone este repositório. Através do terminal, vá para a pasta do projeto e execute:
 
 ```bash
 $ npm install
@@ -32,3 +32,5 @@ Já implementado neste aplicativo:
 - Melhores práticas de README
 
 Abra o aplicativo para ver o que há para ser estudado e implementado: [Projeto online](https://tudo.edubon.work)
+
+https://victorbruce82.medium.com/writing-an-awesome-readme-for-your-side-projects-fabd20f96db0

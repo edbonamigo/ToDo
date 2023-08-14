@@ -10,7 +10,7 @@
 
 You will need `node` and `npm` installed globally on your machine.
 
-Clone down this repository. Via terminal go to the repository folder and run:
+Clone down this repository. Via terminal go to the project folder and run:
 
 ```bash
 $ npm install

@@ -62,11 +62,11 @@ export function ToDos() {
 
   function handleCreateNewTask(e: React.FormEvent) {
     e.preventDefault();
-    const textInput = (e.target as HTMLFormElement).text.value;
+    const textInput = (e.target as HTMLFormElement).text;
 
     const newTask = {
       id: uuidv4(),
-      text: textInput,
+      text: textInput.value,
       completed: false,
     };
 

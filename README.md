@@ -6,7 +6,7 @@
 
 > Responsive todo list app, able to create tasks, delete and mark as complete. Made with React + Typescript + Vite.
 
-##Installation
+## Installation
 
 You will need `node` and `npm` installed globally on your machine.
 

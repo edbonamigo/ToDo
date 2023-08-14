@@ -18,7 +18,7 @@ const TASKS: Task[] = [
   {
     id: uuidv4(),
     text: "List the things left to learn and implement",
-    completed: true,
+    completed: false,
   },
   {
     id: uuidv4(),

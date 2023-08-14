@@ -6,7 +6,7 @@
 
 > Aplicativo de lista de tarefas responsivo, capaz de criar tarefas, excluir e marcar como concluídas. Feito com React + Typescript + Vite.
 
-##Instalação
+## Instalação
 
 Você precisará do `node` e do `npm` instalados globalmente em sua máquina.
 
